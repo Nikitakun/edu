@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "lib" : ["es2015", "es2015.iterable",  "es2017", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "traceResolution": true,
+    "target": "es2015",
+    "types": ["node", "core-js"],
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "./node_modules"
+  ]
+}

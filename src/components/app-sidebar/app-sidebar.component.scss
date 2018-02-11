@@ -1,0 +1,7 @@
+@import "../app-header/app-header.component";
+
+.app-sidebar {
+  position: fixed;
+  height: calc(100vh - #{$header-height});
+  width: 150px;
+}
