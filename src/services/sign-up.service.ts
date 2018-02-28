@@ -9,7 +9,7 @@ export class SignUpService {
     constructor(private apiService: ApiService) {}
 
     sendSignUpData(model: SignUpModel): Observable<SignUpModel> {
-        return this.apiService.post('register', model);
+        return this.apiService.post('account/register', model);
     }
 
 }

@@ -11,7 +11,7 @@ export class LoginService {
                 private messageBusService: MessageBusService) {}
 
     public login(loginData: LoginModel): Observable<LoginModel> {
-        return this.apiService.post('login', loginData)
+        return this.apiService.post('account/login', loginData)
             .map((loginModel: LoginModel) => {
                 this.messageBusService.sendLogin(loginModel);
                 return loginModel;
