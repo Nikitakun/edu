@@ -10,4 +10,9 @@ export class AuthService {
         return Observable.of(this.userToken || null);
     }
 
+    public get isLoggedIn(): boolean {
+        // temporarily
+        return true;
+    }
+
 }

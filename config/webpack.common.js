@@ -19,10 +19,12 @@ module.exports = {
             {
                 test: /\.ts$/,
                 loaders: [
+                    'ng-router-loader',
                     {
                         loader: 'awesome-typescript-loader',
                         options: { configFileName: helpers.root('tsconfig.json') }
-                    } , 'angular2-template-loader'
+                    } ,
+                    'angular2-template-loader'
                 ]
             },
             {
@@ -43,14 +45,18 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                exclude: [/node_modules/],
-                loaders: ['to-string-loader', 'css-loader', 'resolve-url-loader', 'sass-loader']
+                exclude: [/node_modules/, /assets/],
+                loaders: ['to-string-loader', "css-loader", "resolve-url-loader", "sass-loader"]
+            },
+            {
+                test: /index\.scss$/,
+                loaders: ['style-loader', "css-loader", "resolve-url-loader", "sass-loader"]
             },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader']
+                    use: ['style-loader', 'css-loader']
                 })
             }
         ]

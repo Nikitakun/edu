@@ -3,13 +3,13 @@
         <ng-container>
             <form [formGroup]="form.form">
                 <form-control>
-                    <input type="text" placeholder="Email" name="email" formControlName="email">
+                    <input class="form-control" type="text" placeholder="Email" name="email" formControlName="email">
                 </form-control>
                 <form-control>
-                    <input type="password" autocomplete="off" placeholder="Пароль" name="password" formControlName="password">
+                    <input class="form-control" type="password" autocomplete="off" placeholder="Пароль" name="password" formControlName="password">
                 </form-control>
                 <form-control>
-                    <button (click)="submitLogin()">Войти</button>
+                    <button class="btn btn-secondary"  (click)="submitLogin()">Войти</button>
                 </form-control>
             </form>
 
